@@ -5,6 +5,7 @@
 testdata/
 *keys.yaml
 *keys.yml
+media/profile_pics/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
