@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+from .config import Config
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -129,3 +130,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
+keys = Config()
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = keys.MAIL_SERVER
+EMAIL_PORT = keys.MAIL_PORT
+EMAIL_USE_TLS = keys.MAIL_USE_TLS
+EMAIL_HOST_USER = keys.MAIL_USERNAME
+EMAIL_HOST_PASSWORD = keys.MAIL_PASSWORD

@@ -1,0 +1,5 @@
+# Be sure keys.yaml is in .gitignore
+# Create and maintain keys-example.yaml with keys but no values
+
+EMAIL_USER: "mike@example.com"
+EMAIL_PASS: ""
